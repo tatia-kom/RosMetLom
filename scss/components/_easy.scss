@@ -1,0 +1,73 @@
+@import "layout/var";
+
+.easy {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1235px;
+    height: 418px;
+    background: url('../img/dots.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    right: calc(50% - 259px);
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    @media (max-width: $md) {
+      max-width: 40%;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__block {
+    margin-left: 73px;
+
+    @media (max-width: $xs) {
+      margin: 15px 0 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+
+    @media (max-width: $xs) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 47px;
+    font-size: 16px;
+    margin-top: 42px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      margin: 25px 0;
+    }
+  }
+}

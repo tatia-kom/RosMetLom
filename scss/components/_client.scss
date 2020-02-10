@@ -1,0 +1,45 @@
+@import "layout/var";
+
+.client {
+  background: #444;
+  margin-top: 80px;
+  padding: 24px 0 17px;
+
+  @media (max-width: $xs) {
+    margin-top: 30px;
+  }
+
+  &__title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+
+    @media (max-width: $xs) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    margin: 24px auto 13px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: white;
+    max-width: 720px;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__button-wrap {
+    text-align: center;
+
+    @media (max-width: $xs) {
+      margin-top: 25px;
+    }
+  }
+}

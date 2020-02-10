@@ -1,0 +1,217 @@
+@import "layout/var";
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 720px;
+    flex-shrink: 0;
+    margin-top: 110px;
+
+    @media (max-width: $md) {
+      width: 680px;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 88%;
+    color: white;
+    font-size: 48px;
+    line-height: 56px;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $orange2;
+    }
+  }
+
+  &__note {
+    color: #F2F2F2;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 24px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: white;
+    margin-top: 67px;
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+
+    @media (max-width: $xs) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    width: calc(100% - 219px);
+    height: 53px;
+    background: #F2F2F2;
+    border-radius: 40px;
+    margin-top: 13px;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 16px 55px 16px 24px;
+
+    @include placeholderColor(#000);
+
+    @media (max-width: $xs) {
+      width: 100%;
+      padding-right: 24px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 10px 20px rgba(255, 127, 88, 0.5);
+
+    @media (max-width: $xs) {
+      position: relative;
+      height: 50px;
+      margin: 15px auto 0;
+    }
+  }
+
+  &__form-note {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    line-height: 15px;
+    width: 243px;
+    margin: 31px 8px 0 auto;
+
+    @media (max-width: $xs) {
+      margin: 15px auto 0;
+    }
+  }
+
+
+
+  &__right {
+    margin-top: 154px;
+    width: 259px;
+    flex-shrink: 0;
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__grey {
+    background: #828282;
+    border-radius: 8px;
+    padding: 18px 5px 18px 15px;
+    margin-bottom: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    &--money {
+      position: relative;
+      padding-left: 75px;
+      min-height: 84px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+
+      @media (max-width: $sm) {
+        padding-right: 15px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+        width: 48px;
+        height: 48px;
+        background: url('../img/cash.svg') no-repeat center;
+      }
+    }
+
+    &--tonna {
+
+    }
+  }
+
+  &__from {
+    font-size: 23px;
+    font-weight: 700;
+    width: 48px;
+    flex-shrink: 0;
+
+    small {
+      font-size: 14px;
+    }
+  }
+
+  &__tonna-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 11px;
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    small {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      display: block;
+    }
+  }
+}

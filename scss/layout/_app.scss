@@ -1,0 +1,165 @@
+@import "layout/var";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: relative;
+
+    &.modal-opened {
+        overflow: hidden;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+header, footer, section, div, span, p, button, a, input, textarea, form {
+    box-sizing: border-box;
+}
+
+button,input,textarea,select{
+    outline: none;
+}
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.container {
+    width: 1220px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1300px) {
+        width: 1140px;
+    }
+
+    @media (max-width: $md) {
+        width: 940px;
+    }
+
+    @media (max-width: $sm) {
+        width: 720px;
+    }
+
+    @media (max-width: $xs) {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.top {
+    width: 100%;
+    background: url('../img/head.jpg') no-repeat center top;
+    background-size: cover;
+    padding: 16px 0 150px;
+    transition: 0.3s;
+    position: relative;
+
+    @media (max-width: $sm) {
+        padding-bottom: 30px;
+    }
+
+    @media (max-width: $xs) {
+
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    &--menu_opened {
+        @media (max-width: $xs) {
+            padding-top: 380px;
+        }
+    }
+}
+
+.button {
+    background: linear-gradient(110.32deg, $orange1 -220.81%, $orange2 97.01%);
+    color: white;
+    border-radius: 40px;
+    width: 259px;
+    height: 80px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+    z-index: 5;
+    position: relative;
+
+    @media (max-width: $xs) {
+        height: 50px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 5000;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+    &--opened {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &__block {
+        margin: auto;
+    }
+
+    .form__block {
+        background: white;
+
+        @media (max-width: $xs) {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+}

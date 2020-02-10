@@ -1,0 +1,115 @@
+@import "layout/var";
+
+.manager {
+  margin-top: 120px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $xs) {
+    margin-top: 50px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1235px;
+    height: 418px;
+    background: url('../img/dots.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: calc(50% - 275px);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    z-index: 2;
+
+    @media (max-width: $xs) {
+      font-size: 22px;
+    }
+
+    small {
+      display: block;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+
+      @media (max-width: $xs) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__flex {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  &__img {
+    width: 41%;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin-left: 68px;
+
+    @media (max-width: $xs) {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 60px;
+    margin-top: 5px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+
+    @media (max-width: $sm) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .button {
+    @media (max-width: $xs) {
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+@import "layout/var";
+
+.money {
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 100px;
+  overflow: hidden;
+
+  @media (max-width: $xs) {
+    padding-bottom: 50px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1235px;
+    height: 418px;
+    background: url('../img/dots.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    right: calc(50% - 275px);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1235px;
+    height: 418px;
+    background: url('../img/dots.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: calc(50% - 230px);
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    background: #FAFAFA;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    width: 52%;
+    height: 337px;
+    position: absolute;
+    z-index: 1;
+
+    @media (max-width: $xs) {
+      height: 220px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: 1px solid #E5E5E5;
+      border-radius: 20px;
+    }
+
+    &--left {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &--right {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+
+    &--main {
+      position: relative;
+      width: 72%;
+      height: 464px;
+      margin: 45px auto 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: $xs) {
+        width: 100%;
+        height: 320px;
+        margin-top: 30px;
+      }
+
+      &:before {
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+      }
+    }
+  }
+
+  &__img-top {
+    position: absolute;
+    width: 148px;
+    height: 246px;
+    background: url('../img/money-top.png');
+    top: -43px;
+    left: 79%;
+    z-index: 2;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  &__img-bottom {
+    position: absolute;
+    width: 244px;
+    height: 167px;
+    background: url('../img/money-bottom.png');
+    top: 322px;
+    left: 5%;
+    z-index: 2;
+
+    @media (max-width: $md) {
+      top: 345px;
+    }
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  &__top {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 504px;
+
+    @media (max-width: $sm) {
+      max-width: 350px;
+      font-size: 23px;
+      line-height: 26px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 280px;
+      font-size: 18px;
+    }
+  }
+
+  &__amount {
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    color: $orange2;
+    margin: 50px 0;
+
+    @media (max-width: $sm) {
+      font-size: 46px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+  }
+
+  &__note {
+    max-width: 532px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+      max-width: 430px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 260px;
+      font-size: 14px;
+    }
+  }
+}

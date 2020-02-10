@@ -1,0 +1,85 @@
+@import "layout/var";
+
+.license {
+  margin-top: 100px;
+  border-top: 1px solid #D0D2D3;
+
+  @media (max-width: $xs) {
+    margin-top: 30px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 80px;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__flex {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__img {
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__text {
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+
+    li {
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 21px;
+
+      @media (max-width: $xs) {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 16px;
+      }
+    }
+  }
+}
