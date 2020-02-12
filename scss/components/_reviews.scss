@@ -28,9 +28,7 @@
   }
 
   &__slide {
-    @media (max-width: $md) {
-      padding: 0 10px;
-    }
+    padding: 0 10px;
 
     @media (max-width: $xs) {
       padding: 0;
@@ -59,12 +57,8 @@
 
     &.slick-prev {
       transform: scale(-1,1);
-      left: -60px;
+      left: -50px;
       z-index: 1000;
-
-      @media (max-width: $md) {
-        left: -50px;
-      }
 
       @media (max-width: $xs) {
         left: auto;

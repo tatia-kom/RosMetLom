@@ -65,6 +65,14 @@ $(document).ready(function() {
         $(block).addClass('why__content--active');
     });
 
+    $('.license__text li').click(function() {
+        $('.license__text li.license__active').removeClass('license__active');
+        $('.license__img-item--active').removeClass('license__img-item--active');
+        $(this).addClass('license__active');
+        var block = $(this).attr('data-block');
+        $(block).addClass('license__img-item--active');
+    });
+
     $('.reviews__slider').slick({
         arrows: true,
         autoplay: false,
